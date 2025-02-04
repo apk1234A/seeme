@@ -46,7 +46,7 @@ async function detectHumans() {
 
 function sendImageToServer() {
   const imageData = canvas.toDataURL("image/png");
-  fetch("save_image.php", {
+  fetch("http://vicode2.wuaze.com/seeme/save_image.php", {
     method: "POST",
     body: JSON.stringify({ image: imageData }),
     headers: {
